@@ -1,3 +1,6 @@
+import sys
+
+
 def merge(a,b,c,d,):
     dab = []
     st = a
@@ -32,7 +35,7 @@ n = int(input())
 lst = []
 
 for i in range(n):
-    lst.append(int(input()))
+    lst.append(int(sys.stdin.readline()))
 
 mergesort(0,n-1)
 for i in lst:
