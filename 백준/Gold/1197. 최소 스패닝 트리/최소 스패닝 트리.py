@@ -1,3 +1,5 @@
+import sys
+
 n, m = map(int,input().split())
 
 lst = []
@@ -14,7 +16,7 @@ for i in range(n+1):
 SUM = 0
 pay = []
 for i in range(m):
-    pay.append(list(map(int,input().split())))
+    pay.append(list(map(int,sys.stdin.readline().split())))
 
 pay.sort(key=lambda x : x[2])
 
