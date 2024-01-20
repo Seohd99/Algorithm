@@ -1,9 +1,10 @@
+import sys
 n, m = map(int,input().split())
 enter = [0 for i in range(n+1)]
 go = [[]for i in range(n+1)]
 q = []
 for i in range(m):
-    a , b = map(int,input().split())
+    a , b = map(int,sys.stdin.readline().split())
     go[a].append(b)
     enter[b] += 1
 
