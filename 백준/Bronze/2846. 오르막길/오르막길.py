@@ -1,16 +1,14 @@
 n = int(input())
-Input_List = list(map(int,input().split()))
-List = []
+arr = list(map(int, input().split()))
+
 ans = 0
-now = 0
-for i in Input_List:
-    if now < i:
-        List.append(i)
-        now = i
+start = arr[0]
+
+for i in range(1, n):
+    if arr[i] > arr[i - 1]:
+        continue
     else:
-        ans = max(ans, List[-1] - List[0])
-        now = i
-        List = [i]
-if(List):
-    ans = max(ans, List[-1] - List[0])
+        ans = max(ans, arr[i - 1] - start)
+        start = arr[i]
+ans = max(ans, arr[-1] - start)
 print(ans)
