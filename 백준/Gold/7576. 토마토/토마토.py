@@ -1,3 +1,5 @@
+import sys
+input = sys.stdin.readline
 from collections import deque
 
 x, y = map(int,input().split())
