@@ -4,6 +4,7 @@ def solution(n):
 
     while i * i <= n:
         if n % i == 0:
-            answer += (n // i + i) if n // i != i else i
+            x = n // i
+            answer += (x + i) if x != i else i
         i += 1
     return answer
