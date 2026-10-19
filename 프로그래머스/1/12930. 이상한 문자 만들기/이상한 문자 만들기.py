@@ -1,13 +1,14 @@
 def solution(s):
-    i = 1
+    sl = s.split()
+    
     answer = ''
-    for c in s:
-        if c == ' ':
-            i = 0
-        elif i % 2 == 1:
-            c = c.upper()
-        else:
-            c = c.lower()
-        i += 1
-        answer += c
-    return answer
+    for word in sl:
+        for i, c  in enumerate(word):
+            if i % 2 == 0:
+                answer += c.upper()
+            else:
+                answer += c.lower()
+        answer += ' '
+
+    return answer.rstrip()
+
